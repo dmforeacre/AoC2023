@@ -20,6 +20,8 @@ frm.grid(padx=10,pady=10)
 ttk.Style
 numRows = 0
 for x in srcPath.iterdir():
+    if x.name.find(".txt") != -1:
+        continue
     testFiles.append(x)
     testFunc = partial(RunTest, x)
     ttk.Label(frm, text="Run "+x.name[:-3], padding=5).grid(column=0, row=numRows)

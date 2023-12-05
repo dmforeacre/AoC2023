@@ -10,6 +10,7 @@ nums = []
 grid = []
 sum = 0
 with open("src\\3_1.txt") as f:
+#with open("src/3_1test.txt") as f:
     for line in f:
         rowNums = []
         match = re.findall(regex, line)
@@ -26,36 +27,44 @@ for i in range(0, len(grid)):
         if i > 0:    
             if index - 1 > 0:
                 if not isPart and isSymbol(grid, i - 1, index - 1):
-                    print(num, "is a valid part")
+                    print(num,end=" ")
+                    #print(num, "is a valid part, upper left")
                     isPart = True
-            for j in range(index, index + len(num) + 1):
+            for j in range(index, index + len(num)):
                 if not isPart and isSymbol(grid, i - 1, j):
-                    print(num, "is a valid part")
+                    print(num,end=" ")
+                    #print(num, "is a valid part, top",j)
                     isPart = True
             if index + len(num) + 1 < len(grid[i]):
-                if not isPart and isSymbol(grid, i - 1, index + len(num) + 1):
-                    print(num, "is a valid part")
+                if not isPart and isSymbol(grid, i - 1, index + len(num)):
+                    print(num,end=" ")
+                    #print(num, "is a valid part, upper right")
                     isPart = True
-        if index - 1 > 0:
+        if index > 0:
             if not isPart and isSymbol(grid, i, index - 1):
-                print(num, "is valid part")
+                print(num,end=" ")
+                #print(num, "is valid part, left")
                 isPart = True
         if index + len(num) + 1 < len(grid[i]):
             if not isPart and isSymbol(grid, i, index + len(num)):
-                print(num, "is valid part")
+                print(num,end=" ")
+                #print(num, "is valid part, right")
                 isPart = True
         if i < len(grid) - 1:
             if index - 1 > 0:
                 if not isPart and isSymbol(grid, i + 1, index - 1):
-                    print(num, "is a valid part")
+                    print(num,end=" ")
+                    #print(num, "is a valid part, lower left")
                     isPart = True
-            for j in range(index, index + len(num) + 1):
+            for j in range(index, index + len(num)):
                 if not isPart and isSymbol(grid, i + 1, j):
-                    print(num, "is a valid part")
+                    print(num,end=" ")
+                    #print(num, "is a valid part, bot",j)
                     isPart = True
-            if not isPart and index + len(num) + 1 < len(grid[i]):
-                if isSymbol(grid, i + 1, index + len(num)):
-                    print(num, "is a valid part")
+            if index + len(num) + 1 < len(grid[i]):
+                if not isPart and isSymbol(grid, i + 1, index + len(num)):
+                    print(num,end=" ")
+                    #print(num, "is a valid part, lower right")
                     isPart = True
         if isPart:
             sum += int(num)

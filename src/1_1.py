@@ -1,5 +1,5 @@
 sum = 0
-with open("src\\1_1.txt") as f:
+with open("data\\1_1.txt") as f:
     for line in f:
         index = 0
         while not line[index].isnumeric():

@@ -1,6 +1,6 @@
 sum = 0
 digits = {("one", "1"), ("two", "2"), ("three", "3"), ("four", "4"), ("five", "5"), ("six", "6"), ("seven", "7"), ("eight", "8"), ("nine", "9"), ("zero", "0")}
-with open("src\\1_1.txt") as f:
+with open("data\\1_1.txt") as f:
     for line in f:
         findex = 0
         lindex = len(line) - 1

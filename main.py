@@ -1,11 +1,16 @@
 import os
+import time
 from pathlib import Path
 from functools import partial
 from tkinter import *
 from tkinter import ttk
 
 def RunTest(testPath):
+    start = time.perf_counter()
     os.system("python3 src\\" + testPath.name)
+    end = time.perf_counter()
+    print(f"-- Start time: {start:.5f} End Time: {end:.5f} Duration: {end-start:.5f}")
+
 
 def RunAllTests(testFiles):
     for f in testFiles:

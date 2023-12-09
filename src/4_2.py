@@ -1,7 +1,7 @@
 total = 0
 cardNum = 0
 cards = [1] * 202
-with open("src\\4_1.txt") as f:
+with open("data\\4_1.txt") as f:
     for line in f:
         card, nums = line.split(':')
         myNums, winNums = nums.split('|')

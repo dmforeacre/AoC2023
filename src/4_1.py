@@ -1,5 +1,5 @@
 total = 0
-with open("src\\4_1.txt") as f:
+with open("data\\4_1.txt") as f:
     for line in f:
         value = .5
         card, nums = line.split(':')

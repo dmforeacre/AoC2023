@@ -1,5 +1,5 @@
 sum = 0
-with open("src\\2_1.txt") as f:
+with open("data\\2_1.txt") as f:
     for line in f:
         game, moves = line.split(":")
         game = list(game.split())[1]

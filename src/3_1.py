@@ -9,8 +9,8 @@ regex = re.compile(r'(\D*)(\d*)')
 nums = []
 grid = []
 sum = 0
-with open("src\\3_1.txt") as f:
-#with open("src/3_1test.txt") as f:
+with open("data\\3_1.txt") as f:
+#with open("data/3_1test.txt") as f:
     for line in f:
         rowNums = []
         match = re.findall(regex, line)

@@ -2,7 +2,7 @@ maxR = 12
 maxG = 13
 maxB = 14
 sum = 0
-with open("src\\2_1.txt") as f:
+with open("data\\2_1.txt") as f:
     for line in f:
         game, moves = line.split(":")
         game = list(game.split())[1]

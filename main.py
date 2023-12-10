@@ -9,7 +9,7 @@ def RunTest(testPath):
     start = time.perf_counter()
     os.system("python3 src\\" + testPath.name)
     end = time.perf_counter()
-    print(f"-- Start time: {start:.5f} End Time: {end:.5f} Duration: {end-start:.5f}")
+    print(f"-- {testPath.name}: Start time: {start:.5f} End Time: {end:.5f} Duration: {end-start:.5f}")
 
 
 def RunAllTests(testFiles):

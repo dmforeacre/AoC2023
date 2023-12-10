@@ -5,7 +5,7 @@ def isSymbol(grid, x, y):
         return False
     return True
 
-regex = re.compile(r'(\D*)(\d*)')
+regex = re.compile(r'(\D*)(\d+)')
 nums = []
 grid = []
 sum = 0
@@ -15,8 +15,7 @@ with open("data\\3_1.txt") as f:
         rowNums = []
         match = re.findall(regex, line)
         for m in match:
-            if m[1] != "":
-                rowNums.append(m[1])
+            rowNums.append(m[1])
         grid.append(line)
         nums.append(rowNums)
 for i in range(0, len(grid)):

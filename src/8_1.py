@@ -1,5 +1,5 @@
-#with open("data\\8_1.txt") as f:
-with open("data/8_1.txt") as f:
+with open("data\\8_1.txt") as f:
+#with open("data/8_1.txt") as f:
     path = f.readline().strip()
     f.readline()
     line = f.readline()
